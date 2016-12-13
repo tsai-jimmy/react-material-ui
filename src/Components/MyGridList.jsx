@@ -9,7 +9,6 @@ import Subheader from 'material-ui/Subheader';
 import StarBorder from 'material-ui/svg-icons/toggle/star-border';
 import $ from 'jquery'
 
-//export const MyGridList = () => (
 export class MyGridList extends Component {
 	constructor(props) {
 		super(props);

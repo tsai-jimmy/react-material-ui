@@ -46422,7 +46422,6 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 /*引入React Mareail UI 元件程式庫*/
 
 
-//export const MyGridList = () => (
 var MyGridList = exports.MyGridList = function (_Component) {
 	_inherits(MyGridList, _Component);
 
@@ -46463,6 +46462,73 @@ var MyGridList = exports.MyGridList = function (_Component) {
 },{"jquery":2,"material-ui/GridList":9,"material-ui/IconButton":11,"material-ui/Subheader":26,"material-ui/svg-icons/toggle/star-border":204,"react":410,"react-dom":215}],413:[function(require,module,exports){
 'use strict';
 
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+exports.MyPaper = undefined;
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactDom = require('react-dom');
+
+var _Paper = require('material-ui/Paper');
+
+var _Paper2 = _interopRequireDefault(_Paper);
+
+var _jquery = require('jquery');
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /*引入React程式庫*/
+
+/*引入React Mareail UI 元件程式庫*/
+
+/*
+ *引入jQuery程式庫
+ */
+
+
+var MyPaper = exports.MyPaper = function (_Component) {
+	_inherits(MyPaper, _Component);
+
+	function MyPaper(props) {
+		_classCallCheck(this, MyPaper);
+
+		var _this = _possibleConstructorReturn(this, (MyPaper.__proto__ || Object.getPrototypeOf(MyPaper)).call(this, props));
+
+		_this.state = {
+			body: ''
+		};
+		return _this;
+	}
+
+	_createClass(MyPaper, [{
+		key: 'componentDidMount',
+		value: function componentDidMount() {}
+	}, {
+		key: 'render',
+		value: function render() {
+			return _react2.default.createElement(_Paper2.default, {
+				zDepth: 1
+			}, this.state.body, "hello word !");
+		}
+	}]);
+
+	return MyPaper;
+}(_react.Component);
+},{"jquery":2,"material-ui/Paper":22,"react":410,"react-dom":215}],414:[function(require,module,exports){
+'use strict';
+
 var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
@@ -46481,17 +46547,20 @@ var _MyAppBar = require('./Components/MyAppBar');
 
 var _MyGridList = require('./Components/MyGridList');
 
+var _MyPaper = require('./Components/MyPaper');
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+var muiTheme = (0, _getMuiTheme2.default)();
 /*引入React Mareail UI 元件程式庫*/
 /*引入React程式庫*/
-var muiTheme = (0, _getMuiTheme2.default)();
+
 
 var App = function App() {
-	return _react2.default.createElement(_MuiThemeProvider2.default, { muiTheme: muiTheme }, _react2.default.createElement("div", null, _react2.default.createElement(_MyAppBar.MyAppBar, null), _react2.default.createElement(_MyGridList.MyGridList, {
+	return _react2.default.createElement(_MuiThemeProvider2.default, { muiTheme: muiTheme }, _react2.default.createElement("div", null, _react2.default.createElement(_MyAppBar.MyAppBar, null), _react2.default.createElement(_MyPaper.MyPaper, null), _react2.default.createElement(_MyGridList.MyGridList, {
 		source: "https://api.rss2json.com/v1/api.json?rss_url=http%3A%2F%2Fyi-min-cai-blog.logdown.com%2Fposts.rss",
 		celheight: 200 })));
 };
 
 (0, _reactDom.render)(_react2.default.createElement(App, null), document.getElementById('content'));
-},{"./Components/MyAppBar":411,"./Components/MyGridList":412,"material-ui/styles/MuiThemeProvider":191,"material-ui/styles/getMuiTheme":194,"react":410,"react-dom":215}]},{},[413])
+},{"./Components/MyAppBar":411,"./Components/MyGridList":412,"./Components/MyPaper":413,"material-ui/styles/MuiThemeProvider":191,"material-ui/styles/getMuiTheme":194,"react":410,"react-dom":215}]},{},[414])
