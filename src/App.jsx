@@ -10,12 +10,24 @@ import { MyPaper } from './Components/MyPaper';
 
 const muiTheme = getMuiTheme();
 
+
+/*
+ *Global event System
+ *
+*/
+
+const handleclick = () =>{
+
+};
+
+
 const App = () => (
 	<MuiThemeProvider muiTheme={muiTheme} >
 		<div>
 			<MyAppBar />
 			<MyPaper />
 			<MyGridList
+				handleclick={handleclick}
 				source="https://api.rss2json.com/v1/api.json?rss_url=http%3A%2F%2Fyi-min-cai-blog.logdown.com%2Fposts.rss"
 				celheight={200}
 			/>

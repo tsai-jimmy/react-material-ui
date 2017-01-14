@@ -46552,12 +46552,19 @@ var _MyPaper = require('./Components/MyPaper');
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var muiTheme = (0, _getMuiTheme2.default)();
+
+/*
+ *Global event System
+ *
+*/
+
 /*引入React Mareail UI 元件程式庫*/
 /*引入React程式庫*/
-
+var handleclick = function handleclick() {};
 
 var App = function App() {
 	return _react2.default.createElement(_MuiThemeProvider2.default, { muiTheme: muiTheme }, _react2.default.createElement("div", null, _react2.default.createElement(_MyAppBar.MyAppBar, null), _react2.default.createElement(_MyPaper.MyPaper, null), _react2.default.createElement(_MyGridList.MyGridList, {
+		handleclick: handleclick,
 		source: "https://api.rss2json.com/v1/api.json?rss_url=http%3A%2F%2Fyi-min-cai-blog.logdown.com%2Fposts.rss",
 		celheight: 200 })));
 };
