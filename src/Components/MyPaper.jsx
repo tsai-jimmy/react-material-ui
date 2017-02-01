@@ -18,6 +18,11 @@ export class MyPaper extends Component {
 	}
 
 	componentDidMount() {
+		$(window).bind('postUpdate',function(event, title, body) {
+			this.setState ({
+				body: body
+			});
+		}.bind(this));
 	}
 
 	render() {
@@ -26,8 +31,7 @@ export class MyPaper extends Component {
 			<Paper
 				zDepth={1}
 			>
-				{this.state.body}
-				hello word !
+				<div dangerouslySetInnerHTML={{__html: this.state.body}} />
 			</Paper>
 		);
 	}

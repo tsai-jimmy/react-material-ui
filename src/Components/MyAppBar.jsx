@@ -14,7 +14,7 @@ injectTapEventPlugin();
 export const MyAppBar = () => (
 	<AppBar
 		iconElementRight={
-			<IconMenu 
+			< IconMenu 
 				iconButtonElement={
 					<IconButton><MoreVertIcon/></IconButton>
 				}
@@ -22,6 +22,5 @@ export const MyAppBar = () => (
 				<MenuItem primaryText="Help" />
 			</IconMenu>
 		}
-		title="App"
-	/>
+		title="Jimmy blog on react.js"/>
 );

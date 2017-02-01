@@ -10,14 +10,20 @@ import { MyPaper } from './Components/MyPaper';
 
 const muiTheme = getMuiTheme();
 
+/*
+ *引入jQuery程式庫
+ */
+import $ from 'jquery'
+
 
 /*
  *Global event System
  *
 */
 
-const handleclick = () =>{
-
+const handleClick = (title,body) => {
+	// console.log('Title:', title);
+	$(window).trigger('postUpdate', [title,body]);
 };
 
 
@@ -27,9 +33,9 @@ const App = () => (
 			<MyAppBar />
 			<MyPaper />
 			<MyGridList
-				handleclick={handleclick}
-				source="https://api.rss2json.com/v1/api.json?rss_url=http%3A%2F%2Fyi-min-cai-blog.logdown.com%2Fposts.rss"
-				celheight={200}
+				handleClick={handleClick}
+				source="https://api.rss2json.com/v1/api.json?rss_url=http%3A%2F%2Ftsai-jimmy.logdown.com%2Fposts.rss"
+				cellHeight="200"
 			/>
 		</div>
 	</MuiThemeProvider>
