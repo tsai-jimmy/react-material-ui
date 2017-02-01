@@ -1,35 +1,38 @@
-React.js starter kit with Babel, Browserify and Gulpfile.
-
 ## Introduction
 
-This project is derived from [react-babel-starter](https://github.com/jollen/react-babel-starter). It is a simple biolerplate for React.js 102 online training from [Mokoversity](https://www.mokoversity.com) at [React 101 線上課程](https://www.mokoversity.com/course/React/React-101-Online).
+You can take a look at my work.
+
+Click this [github-page](https://tsai-jimmy.github.io/react-material-ui/dist/App.html)
 
 ## Setup
 
-To setup the package.
+First step  setup the package.
 
 ```
 npm install --global gulp
-npm install
+```
+Second step build jsx to js.
+
+```
 gulp build
 ```
 
-To watch file changes.
+or To watch file any changes after you save the JSX file.
 
 ```
 gulp watch
 ```
 
-Browser live reload.
+Third step Browser live reload.
 
 ```
 gulp browser
 ```
 
+And you need to add url "localhost:3000/App.html"
+
+
+
 ## Usage
 
 Edit ```src/App.jsx``` file and run ```gulp build```, the compiled file is at ```dist/App.js```. Please run ```gulp browser``` to load ```dist/App.html``` for resutls.
-
-## License
-
-MIT
