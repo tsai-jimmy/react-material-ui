@@ -1,8 +1,10 @@
 ## Introduction
 
-You can take a look at my work.
+You can take a look at my github-pages.Click this [github-page](https://tsai-jimmy.github.io/react-material-ui/dist/App.html)
 
-Click this [github-page](https://tsai-jimmy.github.io/react-material-ui/dist/App.html)
+My Blog : http://tsai-jimmy.logdown.com/
+
+Or git clone by follwing steps
 
 ## Setup
 
